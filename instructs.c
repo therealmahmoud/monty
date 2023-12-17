@@ -70,6 +70,7 @@ void set_Instructions(void)
 		{"pint", &pint_s}, {"swap", &swap_s},
 		{"nop", &nop_s}, {"add", &add_s},
 		{"pall", &pall_s}, {"sub", &sub_s},
+		{"mul", &mul_s}, {"div", &div_s},
 		{NULL, NULL}
 	};
 
