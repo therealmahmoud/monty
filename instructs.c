@@ -2,7 +2,14 @@
 #include <fcntl.h>
 
 /**
- * run_Instruction - Runs the instruction specified by the args.
+ * run_Instructions - Executes the parsed Monty instruction.
+ *
+ * Description:
+ * Calls the corresponding function to perform the operation
+ * on the stack based on the parsed tokens.
+ *
+ * If no tokens are present, it returns without taking action.
+ *
  */
 
 void run_Instructions(void)
@@ -62,7 +69,7 @@ void set_Instructions(void)
 		{"push", &push_s}, {"pop", &pop_s},
 		{"pint", &pint_s}, {"swap", &swap_s},
 		{"nop", &nop_s}, {"add", &add_s},
-		{"pall", &pall_s},
+		{"pall", &pall_s}, {"sub", &sub_s},
 		{NULL, NULL}
 	};
 

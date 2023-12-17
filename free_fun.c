@@ -31,8 +31,11 @@ void free_tokenz(void)
 }
 
 /**
- * free_stack_Head - Frees the memory allocated for the stackHead and
- * sets it to NULL.
+ * free_stackHead - Frees the memory allocated for the stack.
+ *
+ * Description:
+ * Frees the memory of the entire stack starting from the head.
+ * Sets the head pointer to NULL.
  */
 
 void free_stackHead(void)
@@ -57,8 +60,11 @@ void close_stream(void)
 }
 
 /**
- * free_arg - Frees the memory allocated for the args
- * structure and its members.
+ * free_argss - Frees the memory allocated for the arguments structure.
+ *
+ * Description:
+ * Frees the memory for the entire arguments structure, including
+ * instruction, line, and the entire stack. Sets pointers to NULL.
  */
 
 void free_argss(void)
