@@ -110,3 +110,34 @@ void pchar_s(stack_t **stack, unsigned int line_number)
 	}
 	printf("%c\n", args->stackHead->n);
 }
+
+/**
+ * pstr_s - Prints the ASCII characters from the stack
+ * @stack: A pointer to the stack
+ * @line_number: The line number in the script
+ */
+
+void pstr_s(stack_t **stack, unsigned int line_number)
+{
+	stack_t *tmp;
+	int i = args->stack_length;
+
+	(void) stack;
+	(void) line_number;
+
+	tmp = args->stackHead;
+	while (i > 0 && tmp != NULL && tmp->n != 0)
+	{
+		if ((tmp->n >= 32 && tmp->n <= 126))
+		{
+			printf("%c", tmp->n);
+		}
+		else
+		{
+			break;
+		}
+		tmp = tmp->next;
+		i--;
+	}
+	printf("\n");
+}

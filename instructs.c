@@ -72,6 +72,7 @@ void set_Instructions(void)
 		{"pall", &pall_s}, {"sub", &sub_s},
 		{"mul", &mul_s}, {"div", &div_s},
 		{"mod", &mod_s}, {"pchar", &pchar_s},
+		{"pstr", &pstr_s},
 		{NULL, NULL}
 	};
 
