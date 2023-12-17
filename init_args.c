@@ -1,29 +1,29 @@
 #include "monty.h"
 
 /**
- * init_args - Initializes the argument structure.
+ * init_args - Initializes the args structure.
  */
 
 void init_args(void)
 {
-	argument->instruction = malloc(sizeof(instruction_t));
-	if (argument->instruction == NULL)
+	args->instruction = malloc(sizeof(instruction_t));
+	if (args->instruction == NULL)
 		malloc_fails();
 
-	argument->stackHead = NULL;
-	argument->line = NULL;
+	args->stackHead = NULL;
+	args->line = NULL;
 
-	argument->n_tokens = 0;
-	argument->isComment = 0;
-	argument->line_number = 0;
-	argument->stack = 1;
-	argument->stack_length = 0;
-	argument->stream = NULL;
+	args->n_tokens = 0;
+	args->isComment = 0;
+	args->line_number = 0;
+	args->stack = 1;
+	args->stack_length = 0;
+	args->stream = NULL;
 }
 
 /**
- * check_num_of_args - Checks the number of command-line arguments.
- * @argc: The number of command-line arguments.
+ * check_num_of_args - Checks the number of command-line args.
+ * @argc: The number of command-line args.
  */
 
 void check_num_of_args(int argc)
