@@ -34,7 +34,7 @@ void div_s(stack_t **stack, unsigned int line_number)
 	}
 	tmp1 = args->stackHead;
 	tmp2 = tmp1->next;
-	tmp2->n = tmp2->n * tmp1->n;
+	tmp2->n = tmp2->n / tmp1->n;
 	delete_node();
 	args->stack_length -= 1;
 }
