@@ -174,3 +174,4 @@ void rotl_s(stack_t **stack, unsigned int line_number)
 		args->stackHead->prev = tmp2;
 		args->stackHead = tmp1;
 }
+
