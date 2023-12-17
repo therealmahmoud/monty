@@ -49,7 +49,7 @@ void read_fails(char *fileName)
 
 
 /**
- * malloc_fail - Handles the error when malloc fails to allocate memory.
+ * malloc_fails - Handles the error when malloc fails to allocate memory.
  */
 
 void malloc_fails(void)

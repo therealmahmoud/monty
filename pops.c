@@ -1,7 +1,7 @@
 #include "monty.h"
 
 /**
- * pop_sgcc -Wall -Werror -Wextra -pedantic -std=c89 *.c -o monty - Removes the top element from the stack.
+ * pop_s - Removes the top element from the stack.
  * @stack: Pointer to the stack.
  * @line_number: Line number where the pop function is called.
  */

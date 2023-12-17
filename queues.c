@@ -1,7 +1,7 @@
 #include "monty.h"
 
 /**
- * queue_S - sets the format of the data to a queue (FIFO)
+ * queue_s - sets the format of the data to a queue (FIFO)
  * @stack: Pointer to the stack.
  * @line_number: Line number where the mul function is called.
  */
