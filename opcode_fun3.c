@@ -77,3 +77,27 @@ void mod_s(stack_t **stack, unsigned int line_number)
 	delete_node();
 	args->stack_length -= 1;
 }
+
+void pchar_s(stack_t **stack, unsigned int line_number)
+{
+	(void) stack;
+	if (args->stack_length == 0)
+	{
+		fprintf(stderr, "L%d: can't pchar, stack empty\n",
+				line_number);
+		close_stream();
+		free_tokenz();
+		free_argss();
+		exit(EXIT_FAILURE);
+	}
+	if (args->stackHead->n < 0 || args->stackHead->n > 127)
+	{
+		fprintf(stderr, "L%d: can't pchar, value out of range\n",
+				line_number);
+		close_stream();
+		free_tokenz();
+		free_argss();
+		exit(EXIT_FAILURE);
+	}
+	printf("%c\n", args->stackHead->n);
+}

@@ -71,7 +71,8 @@ void set_Instructions(void)
 		{"nop", &nop_s}, {"add", &add_s},
 		{"pall", &pall_s}, {"sub", &sub_s},
 		{"mul", &mul_s}, {"div", &div_s},
-		{"mod", &mod_s}, {NULL, NULL}
+		{"mod", &mod_s}, {"pchar", &pchar_s},
+		{NULL, NULL}
 	};
 
 	if (args->n_tokens == 0) /* no instructions */

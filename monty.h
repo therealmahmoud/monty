@@ -84,6 +84,7 @@ void sub_s(stack_t **stack, unsigned int line_number);
 void mul_s(stack_t **stack, unsigned int line_number);
 void div_s(stack_t **stack, unsigned int line_number);
 void mod_s(stack_t **stack, unsigned int line_number);
+void pchar_s(stack_t **stack, unsigned int line_number);
 void nop_s(stack_t **stack, unsigned int line_number);
 
 void check_num_of_args(int argc);
