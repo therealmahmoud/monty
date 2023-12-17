@@ -141,3 +141,36 @@ void pstr_s(stack_t **stack, unsigned int line_number)
 	}
 	printf("\n");
 }
+
+/**
+ * rotl_s - Rotates the stack to the top.
+ * @stack: Unused pointer to the stack.
+ * @line_number: Unused line number in the script.
+ *
+ * Description:
+ * Rotates the stack in a circular manner, moving the second-to-top element
+ * to the top. If the stack has one or zero elements, no rotation is performed.
+ *
+ */
+void rotl_s(stack_t **stack, unsigned int line_number)
+{
+	stack_t *tmp1 = NULL;
+	stack_t *tmp2 = NULL;
+
+	(void) line_number;
+	(void) stack;
+	if (args->stackHead == NULL || args->stackHead->next == NULL)
+	{
+		return;
+	}
+		tmp2 = args->stackHead;
+		tmp1 = args->stackHead->next;
+		while (tmp2->next != NULL)
+			tmp2 = tmp2->next;
+
+		tmp1->prev = NULL;
+		tmp2->next = args->stackHead;
+		args->stackHead->next = NULL;
+		args->stackHead->prev = tmp2;
+		args->stackHead = tmp1;
+}

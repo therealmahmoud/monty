@@ -72,11 +72,11 @@ void set_Instructions(void)
 		{"pall", &pall_s}, {"sub", &sub_s},
 		{"mul", &mul_s}, {"div", &div_s},
 		{"mod", &mod_s}, {"pchar", &pchar_s},
-		{"pstr", &pstr_s},
+		{"pstr", &pstr_s}, {"rotl", &rotl_s},
 		{NULL, NULL}
 	};
 
-	if (args->n_tokens == 0) /* no instructions */
+	if (args->n_tokens == 0)
 		return;
 
 
