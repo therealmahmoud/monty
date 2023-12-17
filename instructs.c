@@ -9,7 +9,7 @@ void run_Instructions(void)
 {
 	stack_t *stack = NULL;
 
-	if (args->n_tokens == 0 || args->isComment)
+	if (args->n_tokens == 0)
 		return;
 
 	args->instruction->f(&stack, args->line_number);

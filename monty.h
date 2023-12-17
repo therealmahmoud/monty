@@ -23,9 +23,9 @@
  */
 typedef struct stack_s
 {
-        int n;
-        struct stack_s *prev;
-        struct stack_s *next;
+		int n;
+		struct stack_s *prev;
+		struct stack_s *next;
 } stack_t;
 
 /**
@@ -38,14 +38,27 @@ typedef struct stack_s
  */
 typedef struct instruction_s
 {
-        char *opcode;
-        void (*f)(stack_t **stack, unsigned int line_number);
+		char *opcode;
+		void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
 /**
- * struct args_s - struct to help pass args around
+ * struct args_s - Represents the state of the Monty interpreter.
+ * @line_strs: An array of strings obtained by splitting the input line.
+ * @line: The original input line.
+ * @line_number: The line number in the input file.
+ * @instruction: A pointer to the instruction structure.
+ * @n_tokens: The number of tokens in the line.
+ * @stream: A pointer to the input file stream.
+ * @stack_length: The length of the stack.
+ * @stackHead: A pointer to the head of the stack.
+ * @stack: An indicator for whether to use a stack or queue.
  *
+ * Description: This structure encapsulates the state of the Monty interpreter,
+ * providing information about the input line, file stream, instruction, stack,
+ * and other relevant details needed for processing Monty bytecode.
  */
+
 typedef struct args_s
 {
 	char **line_strs;
@@ -53,8 +66,7 @@ typedef struct args_s
 	unsigned int line_number;
 	instruction_t *instruction;
 	int n_tokens;
-	int isComment;
-	FILE *stream; /* file stream */
+	FILE *stream;
 	int stack_length;
 	stack_t *stackHead;
 	int stack;
