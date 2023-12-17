@@ -78,6 +78,15 @@ void mod_s(stack_t **stack, unsigned int line_number)
 	args->stack_length -= 1;
 }
 
+/**
+ * pchar_s - Prints the ASCII character of the top element of the stack.
+ * @stack: Unused pointer to the head of the stack.
+ * @line_number: Line number in the file.
+ * Description: Exits with EXIT_FAILURE and prints an error message if the
+ * stack is empty or if the value is out of range. Otherwise, prints the
+ * ASCII character of the top element.
+ */
+
 void pchar_s(stack_t **stack, unsigned int line_number)
 {
 	(void) stack;
